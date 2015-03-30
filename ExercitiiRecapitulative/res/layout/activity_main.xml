@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.exercitiirecapitulative.MainActivity" >
+
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_height="wrap_content"
+	    android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="Name" />
+    
+    <Button
+	    android:id="@+id/button1"
+	    android:layout_height="wrap_content"
+	    android:layout_width="wrap_content"
+	    android:layout_below="@id/edit1"
+	    android:layout_toLeftOf="@id/edit1"
+	    android:text="Button1" />
+    
+    <Button
+	    android:id="@+id/buton2"
+	    android:layout_height="wrap_content"
+	    android:layout_width="wrap_content"
+	    android:layout_below="@id/edit1"
+	    android:layout_toRightOf="@id/edit1"
+	    android:text="Button2" />
+    
+    <EditText
+        android:id="@+id/edit_number_1"
+        android:layout_height="wrap_content"
+	    android:layout_width="wrap_content"
+        android:inputType="number"
+        
+        android:layout_below="@id/button1"
+        android:layout_toLeftOf="@id/button1"
+        
+        android:maxLength="1"
+        android:hint="0" />
+    
+    <EditText
+        android:id="@+id/edit_number_2"
+        android:layout_height="wrap_content"
+	    android:layout_width="wrap_content"
+        android:inputType="number"
+        
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/button1"
+        
+        android:maxLength="1"
+        android:hint="0" />
+
+    <EditText
+        android:id="@+id/edit_number_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:layout_alignBaseline="@+id/edit_number_2"
+        android:layout_alignBottom="@+id/edit_number_2"
+        android:layout_toRightOf="@+id/buton2"
+        
+        android:maxLength="1"
+        android:inputType="number" 
+        android:hint="0" />
+    
+    <EditText 
+        android:id="@+id/edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_number_1"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:inputType="number"
+        android:hint="027xxxxx123"
+        />
+    
+    <LinearLayout
+        android:id="@+id/linlayout"
+	 android:layout_height="wrap_content"
+	 android:layout_width="fill_parent"
+	 android:orientation="horizontal"
+	 android:layout_below="@id/edit_text"
+	 android:weightSum="1.0">
+    
+    <CheckBox
+        android:id="@+id/chkAndroid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose1"
+        android:layout_weight=".5"
+        android:checked="true" />
+    
+    <CheckBox
+        android:id="@+id/chkAndroid2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose2"
+        android:layout_weight=".5"
+        android:checked="false" />
+	</LinearLayout>
+	
+    <Button
+	    android:id="@+id/call_vali"
+	    android:layout_height="wrap_content"
+	    android:layout_width="wrap_content"
+	    android:layout_below="@id/linlayout"
+	    android:text="Call Vali" />
+
+</RelativeLayout>
